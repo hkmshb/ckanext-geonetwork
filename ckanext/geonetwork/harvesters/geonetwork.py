@@ -3,7 +3,7 @@ from .utils import GEONETWORK_V210, GEONETWORK_V26
 
 import re
 import logging
-from urlparse import urlparse, unqoute
+from urlparse import urlparse, unquote
 
 from ckan import model
 from ckan.model import Session
@@ -221,7 +221,7 @@ class GeoNetworkHarvester(CSWHarvester, SingletonPlugin):
                 ))
                 outputfmt = (param or None) and param[-1].split('=')[-1]
                 if outputfmt:
-                    fmt = unqoute(outputfmt.strip().lower())
+                    fmt = unquote(outputfmt.strip().lower())
 
                     # drop formats with appended info; for instance
                     # application/gml+xml; version=3.2
