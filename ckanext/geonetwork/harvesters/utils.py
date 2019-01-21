@@ -42,8 +42,6 @@ class GeoNetworkClient(object):
 
         xml = None
         for name in zfile.namelist():
-            #logger.info(' MEF entry: %s', name)
-            #print ' MEF entry: ', name
             if name == 'info.xml':
                 uncompressed = zfile.read(name)
                 xml = etree.fromstring(uncompressed)
